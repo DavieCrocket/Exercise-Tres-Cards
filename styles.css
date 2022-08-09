@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.pageContainer {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: 350px 350px 350px;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.card-1 {
+  display: grid;
+  max-width: 280px;
+  height: 140px;
+  margin: 20px;
+  border: 1px solid rgb(100, 91, 91);
+  border-radius: 5px;
+  background-color: rgb(244, 244, 244);
+  position: relative;
+  left: 70px;
+}
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover {
+  background-color: rgba(220, 216, 227, 0.9)
+}
+
+.card-2 {
+  display: grid;
+  max-width: 280px;
+  height: 140px;
+  margin: 20px;
+  border: 1px solid rgb(100, 91, 91);
+  border-radius: 5px;
+  background-color: rgb(244, 244, 244);
+}
+
+.card-3 {
+  display: grid;
+  max-width: 280px;
+  height: 140px;
+  margin: 20px;
+  border: 1px solid rgb(100, 91, 91);
+  border-radius: 5px;
+  background-color: rgb(244, 244, 244);
+  position: relative;
+  right: 70px;
+}
+
+.card-1-upper {
+  display: flex;
+  grid-template-columns: 70px 1fr;
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+
+.card-1-icon {
+  display: grid;
+  position: relative;
+  grid-auto-rows: max-content;
+}
+
+.card-1-icon img {
+  border-radius: 55px;
+}
+
+.card-1-text {
+  display: grid;
+  grid-column-start: 2;
+  position: relative;
+  left: 0px;
+  grid-auto-rows: max-content;
+  grid-auto-columns: max-content;
+}
+
+.card-1-text ul {
+  padding-top: 0px;
+  display: grid;
+  list-style: none;
+  max-width: 75px;
+  position: relative;
+  left: 10px;
+}
+
+.card-1-text h2 {
+  font-size: 17px;
+  width: 200px;
+}
+
+.card-1-text p {
+  font-size: 15px;
+  max-width: 130px;
+}
+
+.card-1-lower {
+  display: grid;
+  grid-gap: 20px;
+  position: relative;
+  left: 20px;
+  top: 5px;
+}
+
+.card-1-link {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+}
+
+.link-1 {
+  display: grid;
+  position: relative;
+  top: 12px;
+  left:
+}
+
+.link-1 a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* DRY */
+.link-1-icon,
+.link-2-icon,
+.link-3-icon {
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
+
+@media (max-width: 1050px) {
+  .pageContainer {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    justify-items: center;
+    position: relative;
+    left: -40px;
+    }
+
+  .card-1 {
+    display: grid;
+    width: 280px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .card-2 {
+    display: grid;
+    width: 280px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    position: relative;
+    margin-left: 100px;
+    position: relative;
+    top: -20px;
+    left: 30px;
+  }
+
+  .card-3 {
+    display: grid;
+    width: 280px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    position: relative;
+    top: -40px;
+    left: 70px;
+  }
+@media (max-width: 900px) {
+  .card-1 {
+    display: grid;
+    width: 280px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: relative;
+    left: 0;
+  }
+
+  .card-2 {
+    display: grid;
+    width: 280px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    position: relative;
+    margin-left: 100px;
+    position: relative;
+    left: -40px;
+  }
+
+  .card-3 {
+    display: grid;
+    width: 280px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    position: relative;
+    left: 0;
+  }
+}
